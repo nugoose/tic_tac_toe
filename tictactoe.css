@@ -1,0 +1,262 @@
+html, body{
+  background-color: #333;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+*{
+  color: #d9d9d9;
+  font-family: 'Raleway', sans-serif;
+  
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+h1{
+  text-align: center;
+  margin-top: 30px;
+  display: none;
+}
+
+h2{
+  text-align: center;
+}
+
+h3{
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  line-height: 130px;
+  font-size: 50px;
+  transition: text-shadow 1s linear,
+              text-color 1s linear,
+              transform 1s linear;
+}
+
+h3.end{
+  text-shadow: 0px 0px 5px #fff;
+  color: #FF8C00;
+  transform: scale(1.4);
+}
+
+p{
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+/**** choice body (X or O) ****/
+#choiceBody{
+  width: 400px;
+  height: 260px;
+  /*position: absolute;
+  top: 200px;
+  left: 40%;*/
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  
+  border: 2px solid white;
+  border-radius: 5%;
+}
+
+.smallBox{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 180px;
+  border: 2px solid white;
+  border-radius: 5%;
+  line-height: 15px;
+  cursor: pointer;
+  
+  -webkit-transition: background-color 0.6s linear;
+    -moz-transition: background-color 0.6s linear;
+    -o-transition: background-color 0.6s linear;
+    transition: background-color 0.6s linear;
+  
+  -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+  -moz-animation-name: Floating;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+}
+
+.smallBox:hover{
+  background-color: #0077b3;
+  transform: rotate(360deg);/* y u no work */
+}
+
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 12px);}
+    to {-webkit-transform: translate(0, -0px);}    
+}
+    
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 12px);}
+    to {-moz-transform: translate(0, -0px);}    
+}
+
+#smallBox1, #aiBox{
+  left: 65px;
+}
+
+#smallBox2, #userBox{
+  right: 65px;
+}
+
+/**** user or AI body ****/
+#startBody{
+  width: 400px;
+  height: 200px;
+  /*position: absolute;
+  top: 200px;
+  left: 430px;*/
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  
+  border: 2px solid white;
+  border-radius: 5%;
+  display: none;
+}
+
+#startBody .smallBox{
+  top: 100px;
+}
+
+/**** tic tac toe body ****/
+#mainBox{
+  display: none;
+}
+
+#box1, #box2, #box3, #box4, #box5, #box6, #box7, #box8, #box9{
+  width: 140px;
+  height: 140px;
+  border: 2px solid white;
+  position: absolute;
+  cursor: pointer;
+}
+
+#box1, #box4, #box7{
+  border-left: none;
+  left: 390px;
+}
+
+#box1, #box2, #box3{
+  border-top: none;
+  top: 122px;
+}
+
+#box3, #box6, #box9{
+  border-right: none;
+  left: 690px;
+}
+
+#box7, #box8, #box9{
+  border-bottom: none;
+  top: 420px;
+}
+
+#box2, #box5, #box8{
+  left: 540px;
+}
+
+#box4, #box5, #box6{
+  top: 270px;
+}
+
+#firstRow{
+  position: absolute;
+  /*top: 122px;
+  left: 420px;
+  border: 0.5px solid red;*/
+}
+
+#secondRow{
+  position: absolute;
+  /*top: 270px;
+  left: 420px;
+  border: 0.5px solid green;*/
+}
+
+#thirdRow{
+  position: absolute;
+  /*top: 420px;
+  left: 420px;
+  border: 0.5px solid blue;*/
+}
+
+/*****scoreboard*****/
+#scoreboardBody{
+  width: 150px;
+  height: 150px;
+  border: 2px solid white;
+  position: absolute;
+  top: 120px;
+  right: 120px;
+  display: none;
+}
+
+/**** turns board ****/
+#turnsBody{
+  width: 150px;
+  height: 100px;
+  border: 2px solid white;
+  position: absolute;
+  top: 280px;
+  right: 120px;
+  display: none;
+}
+
+#turnsBody p{
+  text-align: center;
+}
+
+#turnBox{
+  width: 112px;
+  height: 40px;
+  border: 2px solid white;
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  box-shadow: 0px 0px 5px #fff;
+}
+
+/******* end game *********/
+.endGame{
+  width: 700px;
+  height: 45px;
+  position: absolute;
+  top: 30px;
+  left: 300px;
+  border: 2px solid white;
+  border-radius: 5%;
+  display: none;
+  line-height: 10px;
+}
+
+#userWins{
+  width: 200px;
+  left: 500px;
+}
+
+#itsADraw{
+  width: 200px;
+  left: 500px;
+}

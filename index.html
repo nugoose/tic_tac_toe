@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- google font -->
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        
+        <!-- css -->
+        <link rel='stylesheet' type='text/css' href='tictactoe.css'>
+        
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        
+        <!-- javascript -->
+        <script src="tictactoe.js"></script>
+    </head>
+    <body>
+        <!-- X or O window -->
+        <div id="choiceBody">
+          <h2>hey, this is the tic tac toe project</h2>
+          <h2>gl hf</h2>
+          <h2>choose your weapon</h2>
+          <div class="smallBox" id="smallBox1"><h2>X</h2></div>
+          <div class="smallBox" id="smallBox2"><h2>O</h2></div>
+        </div>
+
+        <!-- user or AI window -->
+        <div id="startBody">
+          <h2>who will start?</h2>
+          <div class="smallBox" id="aiBox"><h2>AI</h2></div>
+          <div class="smallBox" id="userBox"><h2>me</h2></div>
+        </div>
+
+        <h1>tic tac toe</h1>
+
+        <!-- tic tac toe body -->
+        <div id="mainBox">
+          <div id="firstRow">
+            <div id="box1"></div>
+            <div id="box2"></div>
+            <div id="box3"></div>
+          </div>
+          <div id="secondRow">
+            <div id="box4"></div>
+            <div id="box5"></div>
+            <div id="box6"></div>
+          </div>
+          <div id="thirdRow">
+            <div id="box7"></div>
+            <div id="box8"></div>
+            <div id="box9"></div>
+          </div>
+        </div>
+
+        <!-- scoreboard -->
+        <div id="scoreboardBody">
+          <div id="wins"><p>wins: <span id='winsScore'>0</span></p></div>
+          <div id="draws"><p>draws: <span id='tiesScore'>0</span></p></div>
+          <div id="losses"><p>losses: <span id='lossesScore'>0</span></p></div>
+        </div>
+
+        <!-- turns board -->
+        <div id="turnsBody">
+          <div id="turnBox"></div>
+          <div id="aiTurn"><p>AI</p></div>
+          <div id="yourTurn"><p>your turn</p></div>
+        </div>
+
+        <!-- end game -->
+        <!-- ai wins -->
+        <div id="aiWins" class='endGame'>
+          <h2>the AI has defeated you, you have failed the human race</h2>
+        </div>
+
+        <!-- user wins -->
+        <div id="userWins" class='endGame'>
+          <h2>you have won!</h2>
+        </div>
+
+        <!-- draw -->
+        <div id="itsADraw" class='endGame'>
+          <h2>it's a draw!</h2>
+        </div>
+    </body>
+</html>
